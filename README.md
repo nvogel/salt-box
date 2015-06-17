@@ -4,15 +4,15 @@ Install salt-minion and follow the documentation for using a standalone minion (
 
 In **/srv/salt/top.sls**:
 
-   base:
-     '*':
-       - box
+    base:
+      '*':
+        - box
 
 In **/srv/pillar/top.sls**:
 
-   base:
-     '*':
-       - myuser
+    base:
+      '*':
+        - myuser
 
 In **/srv/pillar/myuser/init.sls**, add pillar data with your user name :
 
