@@ -1,0 +1,125 @@
+ " Note: Skip initialization for vim-tiny or vim-small.
+ if 0 | endif
+
+ if has('vim_starting')
+   if &compatible
+     set nocompatible               " Be iMproved
+   endif
+
+   " Required:
+   set runtimepath+=~/.vim/bundle/neobundle.vim/
+ endif
+
+" Required:
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+" Bundle ***
+NeoBundle "bling/vim-airline"
+NeoBundle "majutsushi/tagbar"
+
+" Puppet
+NeoBundle "nvogel/vim-puppet"
+
+" Color scheme
+NeoBundle 'cyplo/vim-colors-solarized'
+NeoBundle 'sjl/badwolf'
+
+" File navigation
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'mileszs/ack.vim'
+NeoBundle 'scrooloose/nerdtree'
+
+" Git
+NeoBundle "airblade/vim-gitgutter"
+
+NeoBundle 'godlygeek/tabular'
+NeoBundle "vim-scripts/matchit.zip"
+
+" Markdown
+NeoBundle "plasticboy/vim-markdown"
+
+" Python
+"NeoBundle "Valloric/YouCompleteMe"
+NeoBundle "tmhedberg/SimpylFold"
+
+call neobundle#end()
+
+" Enable loading the indent file for specific file types
+:filetype plugin indent on
+
+" Paste
+" Pasting text into a terminal running Vim with automatic indentation enabled
+" can destroy the indentation of the pasted text.
+" This tip shows how to avoid the problem.
+" http://vim.wikia.com/wiki/Toggle_auto-indenting_for_code_paste
+" :help 'paste'
+" :help 'pastetoggle
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" Disable folding
+set nofoldenable
+
+" Set mapleader to ","
+let mapleader = ","
+
+" -----------------------------------------------------------------------------
+" Space/Tab/Special characters
+" -----------------------------------------------------------------------------
+
+" toggle highlight trailing whitespace
+nmap <silent> <leader>s :set nolist!<CR>
+" center display after searching
+nnoremap n nzz
+nnoremap N Nzz
+
+" keep selection after in/outdent
+vnoremap < <gv
+vnoremap > >gv
+
+" replace tab with spaces
+:set expandtab
+
+" number of space characters that will be inserted when the tab key is pressed
+:set tabstop=4
+
+" change the number of space characters inserted for indentation
+:set shiftwidth=4
+
+" makes the spaces feel like real tabs
+:set softtabstop=4
+
+" change tab and indentation settings with a shortcurt
+nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
+nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
+
+set cursorline " highlight current line
+
+" Enable color syntax highlighting
+syntax on
+
+" Colorscheme 
+:set background=dark
+let &t_Co=256 " Force the 256-color mode
+
+" No swapfile & backup
+set noswapfile
+set nobackup
+
+" ------------------------------------------------------------------------------
+" Set status line
+" ------------------------------------------------------------------------------
+set laststatus=2 " Show the status line all the time
+
+"80-character line coloring
+set colorcolumn=80
+
+" always at least 5 lines visible above the cursor, and 5 lines visible
+" below the cursor
+:set scrolloff=5
+
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck
