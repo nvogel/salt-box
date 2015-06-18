@@ -12,8 +12,16 @@ https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - rev: master
     - target: /{{ home }}/{{ user }}/.oh-my-zsh
+    - user: {{ user }}
 
 https://github.com/zsh-users/zsh-syntax-highlighting.git:
   git.latest:
     - rev: master
     - target: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    - user: {{ user }}
+
+https://github.com/seebi/dircolors-solarized.git:
+  git.latest:
+    - rev: master
+    - target: ~/.dircolors-solarized
+    - user: {{ user }}
