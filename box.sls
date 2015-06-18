@@ -1,3 +1,4 @@
-include: 
+include:
   - tmux
   - vim
+  - python
