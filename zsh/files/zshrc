@@ -55,6 +55,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 source $ZSH/oh-my-zsh.sh
 
+unsetopt correct_all
+setopt interactivecomments
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
@@ -80,4 +83,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
-which dircolors >/dev/null && eval `dircolors $HOME/.dircolors-solarized/dircolors.256dark`
+which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)

@@ -28,6 +28,7 @@ NeoBundle 'sjl/badwolf'
 
 " File navigation
 NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'octref/RootIgnore'
 NeoBundle 'mileszs/ack.vim'
 NeoBundle 'scrooloose/nerdtree'
 
@@ -41,8 +42,11 @@ NeoBundle "vim-scripts/matchit.zip"
 NeoBundle "plasticboy/vim-markdown"
 
 " Python
-"NeoBundle "Valloric/YouCompleteMe"
 NeoBundle "tmhedberg/SimpylFold"
+NeoBundle "terryma/vim-multiple-cursors"
+
+" Search
+NeoBundle 'haya14busa/incsearch.vim'
 
 call neobundle#end()
 
@@ -69,6 +73,7 @@ let mapleader = ","
 " Space/Tab/Special characters
 " -----------------------------------------------------------------------------
 
+set listchars=tab:▷⋅,trail:·
 " toggle highlight trailing whitespace
 nmap <silent> <leader>s :set nolist!<CR>
 " center display after searching

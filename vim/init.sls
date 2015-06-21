@@ -12,6 +12,12 @@ vim_config:
     - user: {{ user }}
     - mode: 440
 
+vim_dir:
+  file.directory:
+    - name: /{{ home }}/{{ user }}/.vim
+    - user: {{ user }}
+    - mode: 770
+
 vim_bundle_dir:
   file.directory:
     - name: /{{ home }}/{{ user }}/.vim/bundle
