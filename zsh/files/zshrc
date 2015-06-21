@@ -1,3 +1,4 @@
+{% from "map.jinja" import user,home with context %}
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -84,3 +85,6 @@ setopt interactivecomments
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 #
 which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
+
+# Hide the "user@hostname" info when you're logged in as yourself on your local machine
+DEFAULT_USER={{ user }}
