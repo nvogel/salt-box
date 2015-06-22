@@ -15,7 +15,7 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-" Bundle ***
+" Bundle
 NeoBundle "bling/vim-airline"
 NeoBundle "majutsushi/tagbar"
 
@@ -47,6 +47,9 @@ NeoBundle "terryma/vim-multiple-cursors"
 
 " Search
 NeoBundle 'haya14busa/incsearch.vim'
+
+" Salt
+NeoBundle 'saltstack/salt-vim'
 
 call neobundle#end()
 
