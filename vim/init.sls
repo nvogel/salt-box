@@ -6,7 +6,7 @@ vim_package:
 
 vim_config:
   file.managed:
-    - name:  /{{ home }}/{{ user }}/.vimrc
+    - name:  ~/.vimrc
     - source: salt://vim/files/vimrc
     - template: jinja
     - user: {{ user }}
@@ -14,25 +14,25 @@ vim_config:
 
 vim_dir:
   file.directory:
-    - name: /{{ home }}/{{ user }}/.vim
+    - name: ~/.vim
     - user: {{ user }}
     - mode: 770
 
 vim_bundle_dir:
   file.directory:
-    - name: /{{ home }}/{{ user }}/.vim/bundle
+    - name: ~/.vim/bundle
     - user: {{ user }}
     - mode: 770
 
 https://github.com/Shougo/neobundle.vim:
   git.latest:
     - rev: master
-    - target: /{{ home }}/{{ user }}/.vim/bundle/neobundle.vim
+    - target: ~/.vim/bundle/neobundle.vim
  
 
 vim_plugin:
   file.recurse:
-    - name: /{{ home }}/{{ user }}/.vim/plugin/settings
+    - name: ~/.vim/plugin/settings
     - source: salt://vim/files/plugin/settings
     - user: {{ user }}
     - dir_mode: 770

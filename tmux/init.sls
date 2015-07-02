@@ -5,7 +5,7 @@ tmux_pkg:
 
 tmux_config:
   file.managed:
-    - name:  /{{ home }}/{{ user }}/.tmux.conf
+    - name:  ~/.tmux.conf
     - source: salt://tmux/files/tmux.conf
     - template: jinja
     - user: {{ user }}

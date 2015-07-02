@@ -3,3 +3,4 @@ include:
   - vim
   - python
   - zsh
+  - tools

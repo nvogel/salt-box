@@ -2,7 +2,7 @@
 
 vim_zshrc:
   file.managed:
-    - name:  /{{ home }}/{{ user }}/.zshrc
+    - name:  ~/.zshrc
     - source: salt://zsh/files/zshrc
     - template: jinja
     - user: {{ user }}
@@ -11,7 +11,7 @@ vim_zshrc:
 https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - rev: master
-    - target: /{{ home }}/{{ user }}/.oh-my-zsh
+    - target: ~/.oh-my-zsh
     - user: {{ user }}
 
 https://github.com/zsh-users/zsh-syntax-highlighting.git:
