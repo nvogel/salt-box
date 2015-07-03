@@ -1,11 +1,15 @@
 {% set user = pillar['user']  %}
 {% set home = salt.pillar.get('home','home')  %}
 
-{% set ack = salt['grains.filter_by']({
+{% set packages = salt['grains.filter_by']({
     'Debian': {
-        'pkg': 'ack-grep'
+        'ack': 'ack-grep',
+        'ag': 'silversearcher-ag',
+        'ctags':'exuberant-ctags'
     },
     'MacOS': {
-        'pkg': 'ack'
+        'ack': 'ack',
+        'ag': 'the_silver_searcher',
+        'ctags':'ctags'
     },
 }, default='Debian') %}

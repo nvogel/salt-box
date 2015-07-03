@@ -116,6 +116,11 @@ let &t_Co=256 " Force the 256-color mode
 set noswapfile
 set nobackup
 
+" Mouse
+set ttyfast
+set mouse=a
+set ttymouse=xterm2
+
 " ------------------------------------------------------------------------------
 " Set status line
 " ------------------------------------------------------------------------------

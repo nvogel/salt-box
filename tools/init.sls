@@ -1,5 +1,8 @@
-{% from "map.jinja" import ack with context %}
+{% from "map.jinja" import packages with context %}
 
-ack_package:
+tools_package:
   pkg.installed:
-    - name: {{ ack.pkg  }}
+    - pkgs:
+      - {{ packages.ack }}
+      - {{ packages.ag }}
+      - {{ packages.ctags }}
