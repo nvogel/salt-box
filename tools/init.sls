@@ -6,3 +6,4 @@ tools_package:
       - {{ packages.ack }}
       - {{ packages.ag }}
       - {{ packages.ctags }}
+      - tig
