@@ -7,3 +7,4 @@ tools_package:
       - {{ packages.ag }}
       - {{ packages.ctags }}
       - tig
+      - ipcalc
