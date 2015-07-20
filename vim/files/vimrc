@@ -133,6 +133,9 @@ set colorcolumn=80
 " below the cursor
 :set scrolloff=5
 
+" Needed on osx
+set backspace=start,eol,indent
+
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
 NeoBundleCheck

@@ -87,3 +87,8 @@ which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircol
 
 # Hide the "user@hostname" info when you're logged in as yourself on your local machine
 DEFAULT_USER={{ user }}
+
+{% if salt['grains.get']('os') == 'MacOS' %}
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+{% endif %}
