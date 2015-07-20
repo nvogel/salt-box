@@ -1,4 +1,4 @@
-# salt-box
+## salt-box
 
 Install salt-minion and follow the documentation for using a standalone minion (http://docs.saltstack.com/en/latest/topics/tutorials/standalone_minion.html)
 

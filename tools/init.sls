@@ -8,3 +8,4 @@ tools_package:
       - {{ packages.ctags }}
       - tig
       - ipcalc
+      - figlet
