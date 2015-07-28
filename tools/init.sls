@@ -9,3 +9,4 @@ tools_package:
       - tig
       - ipcalc
       - figlet
+      - jq
