@@ -10,4 +10,3 @@ tools_package:
       - ipcalc
       - figlet
       - jq
-      - {{ packages.whois }}
