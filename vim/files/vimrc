@@ -34,8 +34,10 @@ NeoBundle 'mileszs/ack.vim'
 " Git
 NeoBundle "airblade/vim-gitgutter"
 
-
+" Space
+NeoBundle "ntpeters/vim-better-whitespace"
 NeoBundle 'godlygeek/tabular'
+
 NeoBundle "vim-scripts/matchit.zip"
 
 " Markdown
@@ -76,9 +78,10 @@ let mapleader = ","
 " Space/Tab/Special characters
 " -----------------------------------------------------------------------------
 
-set listchars=tab:▷⋅,trail:·
+"set listchars=tab:▷⋅,trail:·
 " toggle highlight trailing whitespace
-nmap <silent> <leader>s :set nolist!<CR>
+"nmap <silent> <leader>s :set nolist!<CR>
+nmap <silent> <leader>s :ToggleWhitespace<CR>
 " center display after searching
 nnoremap n nzz
 nnoremap N Nzz
