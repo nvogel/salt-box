@@ -33,7 +33,7 @@ NeoBundle 'mileszs/ack.vim'
 
 " Git
 NeoBundle "airblade/vim-gitgutter"
-Neobundle 'tpope/vim-fugitive'
+NeoBundle 'tpope/vim-fugitive'
 
 " Space and Indentation
 NeoBundle "ntpeters/vim-better-whitespace"
