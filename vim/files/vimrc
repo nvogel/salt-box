@@ -33,10 +33,12 @@ NeoBundle 'mileszs/ack.vim'
 
 " Git
 NeoBundle "airblade/vim-gitgutter"
+Neobundle 'tpope/vim-fugitive'
 
-" Space
+" Space and Indentation
 NeoBundle "ntpeters/vim-better-whitespace"
 NeoBundle 'godlygeek/tabular'
+NeoBundle "nathanaelkane/vim-indent-guides"
 
 NeoBundle "vim-scripts/matchit.zip"
 
@@ -111,7 +113,7 @@ set cursorline " highlight current line
 " Enable color syntax highlighting
 syntax on
 
-" Colorscheme 
+" Colorscheme
 :set background=dark
 let &t_Co=256 " Force the 256-color mode
 
