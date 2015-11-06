@@ -70,8 +70,8 @@ call neobundle#end()
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" Disable folding
-set nofoldenable
+" Enable folding with the spacebar
+nnoremap <space> za
 
 " Set mapleader to ","
 let mapleader = ","
@@ -125,6 +125,17 @@ set nobackup
 set ttyfast
 set mouse=a
 set ttymouse=xterm2
+
+" ------------------------------------------------------------------------------
+" Split navigations
+" ------------------------------------------------------------------------------
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set splitbelow
+set splitright
 
 " ------------------------------------------------------------------------------
 " Set status line
