@@ -28,8 +28,15 @@ NeoBundle 'sjl/badwolf'
 
 " File navigation
 NeoBundle 'kien/ctrlp.vim'
+
+" Set wildignore from git repo root
+" https://github.com/octref/RootIgnore
 NeoBundle 'octref/RootIgnore'
 NeoBundle 'mileszs/ack.vim'
+
+" An ack/ag powered code search and view tool
+" https://github.com/dyng/ctrlsf.vim
+NeoBundle 'dyng/ctrlsf.vim'
 
 " Git
 NeoBundle "airblade/vim-gitgutter"
@@ -70,9 +77,6 @@ call neobundle#end()
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 
-" Enable folding with the spacebar
-nnoremap <space> za
-
 " Set mapleader to ","
 let mapleader = ","
 
@@ -104,9 +108,9 @@ vnoremap > >gv
 " makes the spaces feel like real tabs
 :set softtabstop=4
 
-" change tab and indentation settings with a shortcurt
-nmap <leader>2 :set tabstop=2<cr>:set shiftwidth=2<cr>:set softtabstop=2<cr>
-nmap <leader>4 :set tabstop=4<cr>:set shiftwidth=4<cr>:set softtabstop=4<cr>
+" disable folding
+set nofoldenable
+
 
 set cursorline " highlight current line
 
