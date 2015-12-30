@@ -17,6 +17,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 " Bundle
 NeoBundle "bling/vim-airline"
+
+" Code
+NeoBundle "scrooloose/syntastic"
+
+" Tags
 NeoBundle "majutsushi/tagbar"
 
 " Puppet
@@ -27,7 +32,8 @@ NeoBundle 'cyplo/vim-colors-solarized'
 NeoBundle 'sjl/badwolf'
 
 " File navigation
-NeoBundle 'kien/ctrlp.vim'
+" https://github.com/ctrlpvim/ctrlp.vim
+NeoBundle 'ctrlpvim/ctrlp.vim'
 
 " Set wildignore from git repo root
 " https://github.com/octref/RootIgnore
@@ -43,20 +49,30 @@ NeoBundle "airblade/vim-gitgutter"
 NeoBundle 'tpope/vim-fugitive'
 
 " Space and Indentation
+" https://github.com/ntpeters/vim-better-whitespace
 NeoBundle "ntpeters/vim-better-whitespace"
+
+" https://github.com/godlygeek/tabular
 NeoBundle 'godlygeek/tabular'
+
+" https://github.com/nathanaelkane/vim-indent-guides
 NeoBundle "nathanaelkane/vim-indent-guides"
 
+" https://github.com/vim-scripts/matchit.zip
 NeoBundle "vim-scripts/matchit.zip"
 
 " Markdown
 NeoBundle "plasticboy/vim-markdown"
 
 " Python
+" https://github.com/tmhedberg/SimpylFold
 NeoBundle "tmhedberg/SimpylFold"
+
+" https://github.com/terryma/vim-multiple-cursors
 NeoBundle "terryma/vim-multiple-cursors"
 
 " Search
+" https://github.com/haya14busa/incsearch.vim
 NeoBundle 'haya14busa/incsearch.vim'
 
 " Salt
