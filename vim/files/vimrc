@@ -38,36 +38,38 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 " Set wildignore from git repo root
 " https://github.com/octref/RootIgnore
 NeoBundle 'octref/RootIgnore'
-NeoBundle 'mileszs/ack.vim'
 
 " An ack/ag powered code search and view tool
 " https://github.com/dyng/ctrlsf.vim
 NeoBundle 'dyng/ctrlsf.vim'
 
-" Git
+" Git Plugins
+" https://github.com/airblade/vim-gitgutter
 NeoBundle "airblade/vim-gitgutter"
+" https://github.com/tpope/vim-fugitive
 NeoBundle 'tpope/vim-fugitive'
 
 " Space and Indentation
 " https://github.com/ntpeters/vim-better-whitespace
 NeoBundle "ntpeters/vim-better-whitespace"
-
 " https://github.com/godlygeek/tabular
 NeoBundle 'godlygeek/tabular'
-
 " https://github.com/nathanaelkane/vim-indent-guides
 NeoBundle "nathanaelkane/vim-indent-guides"
 
+" Matchit
 " https://github.com/vim-scripts/matchit.zip
 NeoBundle "vim-scripts/matchit.zip"
 
 " Markdown
+" https://github.com/plasticboy/vim-markdown
 NeoBundle "plasticboy/vim-markdown"
 
 " Python
 " https://github.com/tmhedberg/SimpylFold
 NeoBundle "tmhedberg/SimpylFold"
 
+" Edition
 " https://github.com/terryma/vim-multiple-cursors
 NeoBundle "terryma/vim-multiple-cursors"
 
@@ -76,7 +78,12 @@ NeoBundle "terryma/vim-multiple-cursors"
 NeoBundle 'haya14busa/incsearch.vim'
 
 " Salt
+" https://github.com/saltstack/salt-vim
 NeoBundle 'saltstack/salt-vim'
+
+" Jinja
+" https://github.com/Glench/Vim-Jinja2-Syntax
+NeoBundle 'Glench/Vim-Jinja2-Syntax'
 
 call neobundle#end()
 
