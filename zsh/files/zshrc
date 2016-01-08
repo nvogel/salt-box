@@ -46,12 +46,13 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent virtualenvwrapper zsh-syntax-highlighting)
+plugins=(vi-mode git ssh-agent virtualenvwrapper zsh-syntax-highlighting)
 
 # User configuration
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
+
+# Reduce keytimeout in order to switch to escape mode faster
+export KEYTIMEOUT=1
 
 source $ZSH/oh-my-zsh.sh
 
