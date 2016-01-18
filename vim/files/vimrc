@@ -131,6 +131,8 @@ vnoremap > >gv
 " makes the spaces feel like real tabs
 :set softtabstop=4
 
+autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
+
 " disable folding
 set nofoldenable
 
