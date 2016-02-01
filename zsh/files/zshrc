@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,home with context %}
+{% from "map.jinja" import user,info with context %}
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 

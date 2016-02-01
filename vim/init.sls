@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,home with context %}
+{% from "map.jinja" import user,info with context %}
 
 vim_package:
   pkg.installed:
@@ -6,7 +6,7 @@ vim_package:
 
 vim_config:
   file.managed:
-    - name:  ~/.vimrc
+    - name:  {{ info['user_home_path'] }}/.vimrc
     - source: salt://vim/files/vimrc
     - template: jinja
     - user: {{ user }}
@@ -14,7 +14,7 @@ vim_config:
 
 vim_dir:
   file.directory:
-    - name: ~/.vim
+    - name: {{ info['user_home_path'] }}/.vim
     - user: {{ user }}
     - mode: 770
 
@@ -27,15 +27,12 @@ vim_bundle_dir:
 https://github.com/Shougo/neobundle.vim:
   git.latest:
     - rev: master
-    - target: ~/.vim/bundle/neobundle.vim
- 
+    - target: {{ info['user_home_path'] }}/.vim/bundle/neobundle.vim
 
 vim_plugin:
   file.recurse:
-    - name: ~/.vim/plugin/settings
+    - name: {{ info['user_home_path'] }}/.vim/plugin/settings
     - source: salt://vim/files/plugin/settings
     - user: {{ user }}
     - dir_mode: 770
     - file_mode: 440
-
-

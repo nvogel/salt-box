@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,home with context %}
+{% from "map.jinja" import user,info with context %}
 
 vim_zshrc:
   file.managed:
@@ -11,17 +11,17 @@ vim_zshrc:
 https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - rev: master
-    - target: ~/.oh-my-zsh
+    - target: /{{ info['user_home_path'] }}/.oh-my-zsh
     - user: {{ user }}
 
 https://github.com/zsh-users/zsh-syntax-highlighting.git:
   git.latest:
     - rev: master
-    - target: ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    - target: /{{ info['user_home_path'] }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     - user: {{ user }}
 
 https://github.com/seebi/dircolors-solarized.git:
   git.latest:
     - rev: master
-    - target: ~/.dircolors-solarized
+    - target: /{{ info['user_home_path'] }}/.dircolors-solarized
     - user: {{ user }}
