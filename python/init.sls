@@ -8,8 +8,8 @@ python3:
 python-pip:
   pkg.installed
 
-virtualenvwrapper:
-  pip.installed:
-    - require:
-      - pkg: python-pip
+#virtualenvwrapper:
+#  pip.installed:
+#    - require:
+#      - pkg: python-pip
 {% endif %}
