@@ -44,8 +44,6 @@ NeoBundle 'octref/RootIgnore'
 NeoBundle 'dyng/ctrlsf.vim'
 
 " Git Plugins
-" https://github.com/airblade/vim-gitgutter
-NeoBundle "airblade/vim-gitgutter"
 " https://github.com/tpope/vim-fugitive
 NeoBundle 'tpope/vim-fugitive'
 
@@ -180,6 +178,13 @@ set colorcolumn=80
 
 " Needed on osx
 set backspace=start,eol,indent
+
+" disable Background Color Erase (BCE) so that
+" color schemes work properly when Vim is used inside tmux and GNU screen
+" http://superuser.com/questions/399296/256-color-support-for-vim-background-in-tmux
+if &term =~ '256color'
+  set t_ut=
+endif
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
