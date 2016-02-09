@@ -66,6 +66,8 @@ NeoBundle "plasticboy/vim-markdown"
 " Python
 " https://github.com/tmhedberg/SimpylFold
 NeoBundle "tmhedberg/SimpylFold"
+" Requirement in virtual env: pip install jedi
+NeoBundle "davidhalter/jedi-vim"
 
 " Edition
 " https://github.com/terryma/vim-multiple-cursors
