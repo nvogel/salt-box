@@ -50,14 +50,6 @@ NeoBundle 'tpope/vim-fugitive'
 " Space and Indentation
 " https://github.com/ntpeters/vim-better-whitespace
 NeoBundle "ntpeters/vim-better-whitespace"
-" https://github.com/godlygeek/tabular
-NeoBundle 'godlygeek/tabular'
-" https://github.com/nathanaelkane/vim-indent-guides
-NeoBundle "nathanaelkane/vim-indent-guides"
-
-" Matchit
-" https://github.com/vim-scripts/matchit.zip
-NeoBundle "vim-scripts/matchit.zip"
 
 " Markdown
 " https://github.com/plasticboy/vim-markdown
@@ -66,6 +58,7 @@ NeoBundle "plasticboy/vim-markdown"
 " Python
 " https://github.com/tmhedberg/SimpylFold
 NeoBundle "tmhedberg/SimpylFold"
+
 " Requirement in virtual env: pip install jedi
 NeoBundle "davidhalter/jedi-vim"
 
