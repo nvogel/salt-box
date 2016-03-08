@@ -4,3 +4,4 @@ include:
   - python
   - zsh
   - tools
+  - bash
