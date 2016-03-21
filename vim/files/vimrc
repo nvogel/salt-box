@@ -56,11 +56,8 @@ NeoBundle "ntpeters/vim-better-whitespace"
 NeoBundle "plasticboy/vim-markdown"
 
 " Python
-" https://github.com/tmhedberg/SimpylFold
-NeoBundle "tmhedberg/SimpylFold"
-
-" Requirement in virtual env: pip install jedi
-NeoBundle "davidhalter/jedi-vim"
+" https://github.com/tweekmonster/braceless.vim
+NeoBundle "tweekmonster/braceless.vim"
 
 " Edition
 " https://github.com/terryma/vim-multiple-cursors
