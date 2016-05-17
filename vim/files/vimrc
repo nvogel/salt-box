@@ -27,6 +27,9 @@ NeoBundle "majutsushi/tagbar"
 " Puppet
 NeoBundle "nvogel/vim-puppet"
 
+" Groovy
+NeoBundle "vim-scripts/groovyindent-unix"
+
 " Color scheme
 NeoBundle 'cyplo/vim-colors-solarized'
 NeoBundle 'sjl/badwolf'
