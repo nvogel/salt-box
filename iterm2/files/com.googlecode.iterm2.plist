@@ -2237,7 +2237,7 @@
 			<key>Window Type</key>
 			<integer>0</integer>
 			<key>Working Directory</key>
-            <string>{{ home }}</string>
+			<string>{{ home }}</string>
 		</dict>
 	</array>
 	<key>NoSyncDoNotWarnBeforeMultilinePaste</key>
@@ -2300,7 +2300,7 @@
 		</dict>
 	</dict>
 	<key>PrefsCustomFolder</key>
-    <string>{{ home }}/.iterm_profile</string>
+	<string>{{ home }}/.iterm_profile</string>
 	<key>Print In Black And White</key>
 	<true/>
 	<key>PromptOnQuit</key>
