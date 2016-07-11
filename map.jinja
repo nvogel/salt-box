@@ -1,4 +1,4 @@
-{% set user = pillar['user']  %}
+{% set user = salt['grains.get']('box_user')  %}
 
 {% set packages = salt['grains.filter_by']({
     'Debian': {

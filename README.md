@@ -1,44 +1,38 @@
+# Salt-box
 
-## Install Salt
+## OsX
 
-### On OS X
+Install Command line tools without xcode, choose *Install* in the dialog box:
 
- - Install [brew](http://brew.sh) , then install SaltStack
- _ Install Iterm
+    xcode-select --install
+
+Install [brew](http://brew.sh)
+
+Install SaltStack
+
+    brew install saltstack
+
+Recommended software list on OsX:
+
+* Iterm
 
 
-## salt-box
+## Installation
 
-Install salt-minion and follow the documentation for using a standalone minion (http://docs.saltstack.com/en/latest/topics/tutorials/standalone_minion.html)
-
-In **/srv/salt/top.sls**:
-
-    base:
-      '*':
-        - box
-
-In **/srv/pillar/top.sls**:
-
-    base:
-      '*':
-        - myuser
-
-In **/srv/pillar/myuser/init.sls**, add pillar data with your user name :
-
-    user: 'myuser'
-
-In **/etc/salt/minion**, add a root directory with the location of the salt box
-
-    file_roots:
-        base:
-          - /srv/salt
-          - /home/myuser/path/to/salt-box
-
-And clone the salt box :
+Clone this repository in /home/myuser/path/to/salt-box
 
     cd /home/myuser/path/to
     git clone https://github.com/nvogel/salt-box.git
+    cd salt-box
+
+Configure the salt minion:
+
+   make install
 
 In order to apply the confifuration, run:
 
-    sudo salt-call state.highstate
+    make hs
+
+## Iterm
+
+On Iterm go to iTerm2 -> preferences -> General, and check the option "Load preferences from a custom folder or URL" and use the directory /home/myuser/.iterm_profile
