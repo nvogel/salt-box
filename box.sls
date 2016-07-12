@@ -1,4 +1,5 @@
 include:
+  - git
   - tmux
   - vim
   - python
@@ -6,5 +7,5 @@ include:
   - tools
   - bash
   - user
-  - iterm2
   - fonts
+  - iterm2
