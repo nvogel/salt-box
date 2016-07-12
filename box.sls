@@ -5,3 +5,6 @@ include:
   - zsh
   - tools
   - bash
+  - user
+  - iterm2
+  - fonts
