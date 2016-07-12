@@ -9,3 +9,4 @@ include:
   - user
   - fonts
   - iterm2
+  - app
