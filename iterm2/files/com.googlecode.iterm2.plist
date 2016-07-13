@@ -2087,11 +2087,11 @@
 			<key>Name</key>
 			<string>nvgl</string>
 			<key>Non Ascii Font</key>
-			<string>SauceCodePowerline-Medium 12</string>
+			<string>SauceCodePowerline-Semibold 12</string>
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>SauceCodePowerline-Medium 12</string>
+			<string>SauceCodePowerline-Semibold 12</string>
 			<key>Option Key Sends</key>
 			<integer>0</integer>
 			<key>Prompt Before Closing 2</key>
