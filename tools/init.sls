@@ -10,3 +10,4 @@ tools_package:
       - ipcalc
       - figlet
       - jq
+      - cmus
