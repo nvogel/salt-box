@@ -11,3 +11,4 @@ tools_package:
       - figlet
       - jq
       - cmus
+      - tree
