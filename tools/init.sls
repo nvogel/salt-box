@@ -13,3 +13,9 @@ tools_package:
       - tree
       - wget
       - shellcheck
+      - packer
+      - watch
+      - cracklib
+      - nmap
+      - bash
+      - groovy

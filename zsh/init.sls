@@ -19,6 +19,7 @@ https://github.com/zsh-users/zsh-syntax-highlighting.git:
     - rev: master
     - target: /{{ info['user_home_path'] }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     - user: {{ user }}
+    - force_fetch: True
 
 https://github.com/seebi/dircolors-solarized.git:
   git.latest:

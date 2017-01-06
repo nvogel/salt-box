@@ -51,6 +51,8 @@ plugins=(git ssh-agent virtualenvwrapper zsh-syntax-highlighting z)
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
+
 # Reduce keytimeout in order to switch to escape mode faster
 export KEYTIMEOUT=1
 
