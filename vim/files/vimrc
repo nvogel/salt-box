@@ -148,6 +148,14 @@ set ttyfast
 set mouse=a
 set ttymouse=xterm2
 
+" Clipboard
+set clipboard=unnamed
+
+
+" Modelines allow you to set variables specific to a file
+set modeline
+set modelines=5
+
 " ------------------------------------------------------------------------------
 " Split navigations
 " ------------------------------------------------------------------------------

@@ -18,4 +18,4 @@ tools_package:
       - cracklib
       - nmap
       - bash
-      - groovy
+      - reattach-to-user-namespace

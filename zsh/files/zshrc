@@ -8,6 +8,22 @@ export ZSH=$HOME/.oh-my-zsh
 # time that oh-my-zsh is loaded.
 ZSH_THEME="agnoster"
 
+
+# https://github.com/caiogondim/bullet-train-oh-my-zsh-theme
+ZSH_THEME="bullet-train"
+
+BULLETTRAIN_PROMPT_ORDER=(
+    status
+    custom
+    dir
+    virtualenv
+    git
+    cmd_exec_time
+  )
+
+BULLETTRAIN_STATUS_EXIT_SHOW="true"
+
+
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
@@ -46,12 +62,13 @@ HIST_STAMPS="yyyy-mm-dd"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ssh-agent virtualenvwrapper zsh-syntax-highlighting z)
+plugins=(git ssh-agent virtualenvwrapper zsh-syntax-highlighting)
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export GROOVY_HOME=/usr/local/opt/groovy/libexec
+zstyle :omz:plugins:ssh-agent agent-forwarding on
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Reduce keytimeout in order to switch to escape mode faster
 export KEYTIMEOUT=1
