@@ -17,3 +17,10 @@ install_virtualenvwrapper:
     - runas: {{ user }}
     - unless:
       - pip list | grep virtualenvwrapper
+
+install_tmuxp:
+  cmd.run:
+    - name: pip install tmuxp
+    - runas: {{ user }}
+    - unless:
+      - pip list | grep tmuxp
