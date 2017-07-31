@@ -39,3 +39,16 @@ On Iterm go to iTerm2 -> preferences -> General,
 and check the option "Load preferences from a custom folder or URL" and use the directory /home/myuser/.iterm_profile
 
 To save the current iterm2 configuration, run *make update*, then commit the new version
+
+
+## Quick start in cloud environment
+
+    salt '*' saltutil.refresh_pillar
+    salt '*' mine.update
+    salt '*' state.apply hosts
+    salt-call state.apply tmux pillar='{"box_user": "fedora"}'
+    salt-call state.apply tmux.tmuxp pillar='{"box_user": "fedora"}'
+
+    # as fedora user
+    tmuxp load .
+

@@ -66,8 +66,6 @@ plugins=(git ssh-agent virtualenvwrapper zsh-syntax-highlighting)
 
 # User configuration
 
-zstyle :omz:plugins:ssh-agent agent-forwarding on
-
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Reduce keytimeout in order to switch to escape mode faster
