@@ -66,6 +66,10 @@ NeoBundle "tweekmonster/braceless.vim"
 " https://github.com/terryma/vim-multiple-cursors
 NeoBundle "terryma/vim-multiple-cursors"
 
+" The set of operator and textobject to search/select/edit sandwiched textobjects
+" https://github.com/machakann/vim-sandwich
+NeoBundle 'machakann/vim-sandwich'
+
 " Search
 " https://github.com/haya14busa/incsearch.vim
 NeoBundle 'haya14busa/incsearch.vim'
@@ -77,6 +81,10 @@ NeoBundle 'saltstack/salt-vim'
 " Jinja
 " https://github.com/Glench/Vim-Jinja2-Syntax
 NeoBundle 'Glench/Vim-Jinja2-Syntax'
+
+" Terraform
+" https://github.com/hashivim/vim-terraform
+NeoBundle 'hashivim/vim-terraform'
 
 call neobundle#end()
 
@@ -136,8 +144,8 @@ set cursorline " highlight current line
 syntax on
 
 " Colorscheme
-:set background=dark
-let &t_Co=256 " Force the 256-color mode
+":set background=dark
+"let &t_Co=256 " Force the 256-color mode
 
 " No swapfile & backup
 set noswapfile
