@@ -1,11 +1,12 @@
-{% from "map.jinja" import user,info with context %}
+{% from "map.jinja" import user,user_home_path with context %}
+
 tmux_pkg:
   pkg.installed:
     - name: tmux
 
 tmux_config:
   file.managed:
-    - name:  {{ info['user_home_path'] }}/.tmux.conf
+    - name:  {{ user_home_path }}/.tmux.conf
     - source: salt://tmux/files/tmux.conf
     - template: jinja
     - user: {{ user }}

@@ -1,4 +1,5 @@
 {% set user = salt['pillar.get']('box_user')  %}
+{% set user_home_path = salt['user.info'](user)['home']  %}
 
 {% set packages = salt['grains.filter_by']({
     'Debian': {
@@ -10,14 +11,5 @@
         'ack': 'ack',
         'ag': 'the_silver_searcher',
         'ctags':'ctags',
-    },
-}, default='Debian') %}
-
-{% set info = salt['grains.filter_by']({
-    'Debian': {
-        'user_home_path': '/home/' + user,
-    },
-    'MacOS': {
-        'user_home_path': '/Users/' + user,
     },
 }, default='Debian') %}
