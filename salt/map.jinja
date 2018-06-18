@@ -1,4 +1,5 @@
 {% set user = salt['pillar.get']('box_user')  %}
+{% set theme = salt['pillar.get']('theme', 'powerlevel9k')  %}
 {% set user_home_path = salt['user.info'](user)['home']  %}
 
 {% set packages = salt['grains.filter_by']({

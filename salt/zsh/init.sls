@@ -29,6 +29,12 @@ bullet_train_theme:
     - user: {{ user }}
     - mode: 440
 
+https://github.com/bhilburn/powerlevel9k.git:
+  git.latest:
+    - rev: master
+    - target: /{{ user_home_path }}/.oh-my-zsh/custom/themes/powerlevel9k
+    - user: {{ user }}
+
 https://github.com/zsh-users/zsh-syntax-highlighting.git:
   git.latest:
     - rev: master
@@ -41,3 +47,4 @@ https://github.com/seebi/dircolors-solarized.git:
     - rev: master
     - target: /{{ user_home_path }}/.dircolors-solarized
     - user: {{ user }}
+    - force_reset: True
