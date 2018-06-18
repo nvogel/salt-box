@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,info with context %}
+{% from "map.jinja" import user,user_home_path with context %}
 
 vim_zshrc:
   file.managed:
@@ -8,11 +8,10 @@ vim_zshrc:
     - user: {{ user }}
     - mode: 440
 
-
 https://github.com/robbyrussell/oh-my-zsh.git:
   git.latest:
     - rev: master
-    - target: /{{ info['user_home_path'] }}/.oh-my-zsh
+    - target: /{{ user_home_path }}/.oh-my-zsh
     - user: {{ user }}
 
 create_custom_theme_dir:
@@ -33,12 +32,12 @@ bullet_train_theme:
 https://github.com/zsh-users/zsh-syntax-highlighting.git:
   git.latest:
     - rev: master
-    - target: /{{ info['user_home_path'] }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+    - target: /{{ user_home_path }}/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
     - user: {{ user }}
     - force_fetch: True
 
 https://github.com/seebi/dircolors-solarized.git:
   git.latest:
     - rev: master
-    - target: /{{ info['user_home_path'] }}/.dircolors-solarized
+    - target: /{{ user_home_path }}/.dircolors-solarized
     - user: {{ user }}
