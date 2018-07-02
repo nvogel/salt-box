@@ -75,7 +75,8 @@ plugins=(git zsh-syntax-highlighting)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export GOPATH=$HOME/go
+export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$PATH
 
 # Reduce keytimeout in order to switch to escape mode faster
 export KEYTIMEOUT=1
