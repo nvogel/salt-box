@@ -18,16 +18,14 @@ vim_dir:
     - user: {{ user }}
     - mode: 770
 
-vim_bundle_dir:
-  file.directory:
-    - name: ~/.vim/bundle
+install_plugin_manger:
+  file.managed:
+    - name: {{ user_home_path }}/.vim/autoload/plug.vim
+    - source: https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+    - skip_verify: True
+    - makedirs: True
     - user: {{ user }}
-    - mode: 770
-
-https://github.com/Shougo/neobundle.vim:
-  git.latest:
-    - rev: master
-    - target: {{ user_home_path }}/.vim/bundle/neobundle.vim
+    - mode: 440
 
 vim_plugin:
   file.recurse:

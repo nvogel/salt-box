@@ -1,95 +1,71 @@
- " Note: Skip initialization for vim-tiny or vim-small.
- if 0 | endif
-
- if has('vim_starting')
-   if &compatible
-     set nocompatible               " Be iMproved
-   endif
-
-   " Required:
-   set runtimepath+=~/.vim/bundle/neobundle.vim/
- endif
-
-" Required:
-call neobundle#begin(expand('~/.vim/bundle/'))
-
-NeoBundleFetch 'Shougo/neobundle.vim'
+call plug#begin('~/.vim/plugged')
 
 " Bundle
-NeoBundle "bling/vim-airline"
+Plug 'bling/vim-airline'
 
 " Code
-NeoBundle "scrooloose/syntastic"
+Plug 'scrooloose/syntastic'
 
 " Tags
-NeoBundle "majutsushi/tagbar"
-
-" Puppet
-NeoBundle "nvogel/vim-puppet"
+Plug 'majutsushi/tagbar'
 
 " Groovy
-NeoBundle "vim-scripts/groovyindent-unix"
+Plug 'vim-scripts/groovyindent-unix'
 
 " Color scheme
-NeoBundle 'cyplo/vim-colors-solarized'
-NeoBundle 'sjl/badwolf'
+Plug 'cyplo/vim-colors-solarized'
+Plug 'sjl/badwolf'
 
 " File navigation
 " https://github.com/ctrlpvim/ctrlp.vim
-NeoBundle 'ctrlpvim/ctrlp.vim'
-
-" Set wildignore from git repo root
-" https://github.com/octref/RootIgnore
-NeoBundle 'octref/RootIgnore'
+Plug 'ctrlpvim/ctrlp.vim'
 
 " An ack/ag powered code search and view tool
 " https://github.com/dyng/ctrlsf.vim
-NeoBundle 'dyng/ctrlsf.vim'
+Plug 'dyng/ctrlsf.vim'
 
 " Git Plugins
 " https://github.com/tpope/vim-fugitive
-NeoBundle 'tpope/vim-fugitive'
+Plug 'tpope/vim-fugitive'
 
 " Space and Indentation
 " https://github.com/ntpeters/vim-better-whitespace
-NeoBundle "ntpeters/vim-better-whitespace"
+Plug 'ntpeters/vim-better-whitespace'
 
 " Markdown
 " https://github.com/plasticboy/vim-markdown
-NeoBundle "plasticboy/vim-markdown"
+Plug 'plasticboy/vim-markdown'
 
 " Python
 " https://github.com/tweekmonster/braceless.vim
-NeoBundle "tweekmonster/braceless.vim"
+Plug 'tweekmonster/braceless.vim'
 
 " Edition
 " https://github.com/terryma/vim-multiple-cursors
-NeoBundle "terryma/vim-multiple-cursors"
+Plug 'terryma/vim-multiple-cursors'
 
 " The set of operator and textobject to search/select/edit sandwiched textobjects
 " https://github.com/machakann/vim-sandwich
-NeoBundle 'machakann/vim-sandwich'
+Plug 'machakann/vim-sandwich'
 
 " Search
 " https://github.com/haya14busa/incsearch.vim
-NeoBundle 'haya14busa/incsearch.vim'
+Plug 'haya14busa/incsearch.vim'
 
 " Salt
 " https://github.com/saltstack/salt-vim
-NeoBundle 'saltstack/salt-vim'
+Plug 'saltstack/salt-vim'
 
 " Jinja
 " https://github.com/Glench/Vim-Jinja2-Syntax
-NeoBundle 'Glench/Vim-Jinja2-Syntax'
+Plug 'Glench/Vim-Jinja2-Syntax'
 
 " Terraform
 " https://github.com/hashivim/vim-terraform
-NeoBundle 'hashivim/vim-terraform'
+Plug 'hashivim/vim-terraform'
 
-call neobundle#end()
+call plug#end()
 
-" Enable loading the indent file for specific file types
-:filetype plugin indent on
 
 " Paste
 " Pasting text into a terminal running Vim with automatic indentation enabled
@@ -137,11 +113,7 @@ autocmd FileType make setlocal ts=8 sts=8 sw=8 noexpandtab
 " disable folding
 set nofoldenable
 
-
 set cursorline " highlight current line
-
-" Enable color syntax highlighting
-syntax on
 
 " Colorscheme
 ":set background=dark
@@ -197,6 +169,3 @@ if &term =~ '256color'
   set t_ut=
 endif
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
