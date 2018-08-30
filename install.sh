@@ -12,7 +12,7 @@ file_client: local
 # add a root directory with the location of the salt box
 file_roots:
   base:
-    - $(pwd)
+    - $(pwd)/salt
 
 grains:
   box_user: ${user_name}
