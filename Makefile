@@ -13,5 +13,5 @@ tmux: ## apply tmux state
 
 update: ## Update Iterm configuration
 	@echo "Update configuration"
-	cp ${HOME}/.iterm_profile/com.googlecode.iterm2.plist iterm2/files/com.googlecode.iterm2.plist
-	sed -i ''  "s@\(${HOME}\)@\{\{ home \}\}@g" iterm2/files/com.googlecode.iterm2.plist
+	cp ${HOME}/.iterm_profile/com.googlecode.iterm2.plist srv/salt/iterm2/files/com.googlecode.iterm2.plist
+	sed -i ''  "s@\(${HOME}\)@\{\{ home \}\}@g" srv/salt/iterm2/files/com.googlecode.iterm2.plist
