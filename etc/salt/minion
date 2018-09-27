@@ -1,0 +1,17 @@
+# root dir is current directory
+# from where you run the salt-ssh command
+root_dir: .
+
+file_ignore_regex:
+  - '/\.git($|/)'
+
+log_file: log
+
+
+file_roots:
+  base:
+    - ./srv/salt
+
+pillar_roots:
+  base:
+    - ./srv/pillar

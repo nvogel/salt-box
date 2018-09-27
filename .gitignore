@@ -1,1 +1,5 @@
 .DS\_Store
+var
+log
+etc/salt/minion_id
+srv/pillar/vars.sls

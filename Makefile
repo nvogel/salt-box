@@ -3,11 +3,13 @@ help: ## Print help (default target)
 
 install: ## Configure salt-minion
 	@echo "Install salt-box"
-	sudo ./install.sh
+	./install.sh
 
-hs: ## Run an highstate
-	@echo "Apply highstate"
-	sudo salt-call --log-level=quiet state.highstate
+vim: ## apply vim state
+	salt-call --local -c etc/salt state.apply vim
+
+tmux: ## apply tmux state
+	salt-call --local -c etc/salt state.apply tmux
 
 update: ## Update Iterm configuration
 	@echo "Update configuration"
