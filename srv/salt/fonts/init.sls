@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,info with context %}
+{% from "map.jinja" import user,user_home_path with context %}
 
 create_powerline_fonts_directory:
   file.directory:
@@ -9,7 +9,7 @@ create_powerline_fonts_directory:
 https://github.com/powerline/fonts:
   git.latest:
     - rev: master
-    - target: {{ info['user_home_path'] }}/.powerline_fonts
+    - target: {{ user_home_path }}/.powerline_fonts
 
 install_font:
   cmd.run:

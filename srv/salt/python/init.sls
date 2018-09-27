@@ -4,11 +4,14 @@
 python:
   pkg.installed
 
-python3:
+python@2:
   pkg.installed
+
 {% else %}
+
 python-pip:
   pkg.installed
+
 {% endif %}
 
 install_virtualenvwrapper:
@@ -17,10 +20,3 @@ install_virtualenvwrapper:
     - runas: {{ user }}
     - unless:
       - pip list | grep virtualenvwrapper
-
-install_tmuxp:
-  cmd.run:
-    - name: pip install tmuxp
-    - runas: {{ user }}
-    - unless:
-      - pip list | grep tmuxp

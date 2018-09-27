@@ -1,4 +1,4 @@
-{% from "map.jinja" import user,info with context %}
+{% from "map.jinja" import user,user_home_path with context %}
 
 shellcheck:
   pkg.installed

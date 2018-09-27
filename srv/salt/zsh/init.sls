@@ -5,7 +5,6 @@ vim_zshrc:
     - name:  ~/.zshrc
     - source: salt://zsh/files/zshrc
     - template: jinja
-    - user: {{ user }}
     - mode: 440
 
 https://github.com/robbyrussell/oh-my-zsh.git:
