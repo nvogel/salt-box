@@ -20,14 +20,6 @@ create_custom_theme_dir:
     - makedirs: True
     - mode: 740
 
-bullet_train_theme:
-  file.managed:
-    - name:   ~/.oh-my-zsh/custom/themes/bullet-train.zsh-theme
-    - source: https://raw.githubusercontent.com/caiogondim/bullet-train-oh-my-zsh-theme/master/bullet-train.zsh-theme
-    - skip_verify: True
-    - user: {{ user }}
-    - mode: 440
-
 https://github.com/bhilburn/powerlevel9k.git:
   git.latest:
     - rev: master

@@ -1,17 +1,9 @@
 {% from "map.jinja" import user,user_home_path with context %}
 
-create_powerline_fonts_directory:
-  file.directory:
-    - name: ~/.powerline_fonts
+Install_hack_font:
+  file.managed:
+    - name: "~/Library/Fonts/Hack Regular Nerd Font Complete.ttf"
+    - source: "https://github.com/ryanoasis/nerd-fonts/raw/2.0.0/patched-fonts/Hack/Regular/complete/Hack%20Regular%20Nerd%20Font%20Complete.ttf"
+    - skip_verify: True
     - user: {{ user }}
-    - mode: 770
-
-https://github.com/powerline/fonts:
-  git.latest:
-    - rev: master
-    - target: {{ user_home_path }}/.powerline_fonts
-
-install_font:
-  cmd.run:
-    - name: "bash ~/.powerline_fonts/install.sh"
-    - runas: {{ user }}
+    - mode: 440

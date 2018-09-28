@@ -19,3 +19,8 @@ tools_package:
       - nmap
       - bash
       - reattach-to-user-namespace
+
+
+install_color_ls:
+  gem.installed:
+    - name: colorls
