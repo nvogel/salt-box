@@ -1,4 +1,4 @@
-{% from "map.jinja" import packages with context %}
+{% from "map.jinja" import packages,user with context %}
 
 tools_package:
   pkg.installed:
@@ -8,19 +8,14 @@ tools_package:
       - {{ packages.ctags }}
       - tig
       - ipcalc
-      - figlet
       - jq
       - tree
       - wget
-      - shellcheck
-      - packer
       - watch
-      - cracklib
       - nmap
       - bash
-      - reattach-to-user-namespace
-
 
 install_color_ls:
-  gem.installed:
-    - name: colorls
+  cmd.run:
+    - name: "gem install colorls --user-install"
+    - unless: "gem list | grep colorls"
