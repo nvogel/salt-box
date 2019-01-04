@@ -61,7 +61,7 @@ plugins=(git zsh-syntax-highlighting)
 # User configuration
 
 export GOPATH=$HOME/go
-export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/google-cloud-sdk/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$HOME/go/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/google-cloud-sdk/bin:/usr/local/lib/node_modules:$PATH
 
 # Reduce keytimeout in order to switch to escape mode faster
 export KEYTIMEOUT=1
