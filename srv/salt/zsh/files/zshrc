@@ -78,6 +78,9 @@ setopt no_share_history
 
 alias salt-apply="salt-call --local -c etc/salt state.apply"
 alias lc='colorls -lA --sd'
+alias lct='colorls --tree -d'
+alias lc1='colorls -1'
+alias l1='colorls -1'
 
 which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
 
