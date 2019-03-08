@@ -13,7 +13,7 @@ ZSH_THEME="powerlevel9k/powerlevel9k"
 POWERLEVEL9K_MODE='nerdfont-complete'
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time virtualenv aws)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time virtualenv aws kubecontext)
 POWERLEVEL9K_PYTHON_ICON='\U1F40D'
 {% endif %}
 
@@ -78,7 +78,7 @@ setopt no_share_history
 
 alias salt-apply="salt-call --local -c etc/salt state.apply"
 alias lc='colorls -lA --sd'
-alias lct='colorls --tree -d'
+alias lct='colorls --tree'
 alias lc1='colorls -1'
 alias l1='colorls -1'
 

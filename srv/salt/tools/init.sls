@@ -15,7 +15,9 @@ tools_package:
       - nmap
       - bash
 
+{% if salt['grains.get']('os') == 'MacOS' %}
 install_color_ls:
   cmd.run:
     - name: "gem install colorls --user-install"
     - unless: "gem list | grep colorls"
+{% endif %}
