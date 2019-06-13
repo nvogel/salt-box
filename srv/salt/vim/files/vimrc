@@ -70,6 +70,12 @@ Plug 'hashivim/vim-terraform'
 " https://github.com/airblade/vim-gitgutter
 Plug 'airblade/vim-gitgutter'
 
+" Fzf
+" https://bluz71.github.io/2018/12/04/fuzzy-finding-in-vim-with-fzf.html
+" https://github.com/junegunn/fzf.vim
+Plug 'junegunn/fzf'
+Plug 'junegunn/fzf.vim'
+
 call plug#end()
 
 
