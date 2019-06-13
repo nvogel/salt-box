@@ -3,7 +3,7 @@
 install_terraform:
   archive.extracted:
     - name: {{ user_home_path }}//bin
-    - source: https://releases.hashicorp.com/terraform/0.11.13/terraform_0.11.13_darwin_amd64.zip
+    - source: https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_darwin_amd64.zip
     - skip_verify: True
     - enforce_toplevel: False
 

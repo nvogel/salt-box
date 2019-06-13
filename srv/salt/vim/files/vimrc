@@ -15,6 +15,8 @@ Plug 'vim-scripts/groovyindent-unix'
 " Color scheme
 Plug 'cyplo/vim-colors-solarized'
 Plug 'sjl/badwolf'
+Plug 'marciomazza/vim-brogrammer-theme'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 " File navigation
 " https://github.com/ctrlpvim/ctrlp.vim
@@ -63,6 +65,10 @@ Plug 'Glench/Vim-Jinja2-Syntax'
 " Terraform
 " https://github.com/hashivim/vim-terraform
 Plug 'hashivim/vim-terraform'
+
+" Git diff
+" https://github.com/airblade/vim-gitgutter
+Plug 'airblade/vim-gitgutter'
 
 call plug#end()
 
@@ -168,4 +174,3 @@ set backspace=start,eol,indent
 if &term =~ '256color'
   set t_ut=
 endif
-
