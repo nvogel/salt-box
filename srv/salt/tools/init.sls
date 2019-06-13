@@ -14,6 +14,7 @@ tools_package:
       - watch
       - nmap
       - bash
+      - ripgrep
 
 {% if salt['grains.get']('os') == 'MacOS' %}
 install_color_ls:
