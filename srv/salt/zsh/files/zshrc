@@ -64,7 +64,7 @@ plugins=(git zsh-syntax-highlighting kubectl)
 export GOROOT=~/goroot
 export GOPATH=$HOME/go
 
-export PATH=$HOME/bin:$GOPATH/bin:/usr/local/bin:$HOME/goroot/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/google-cloud-sdk/bin:/usr/local/lib/node_modules:/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:$HOME/.fzf/bin:$GOPATH/bin:/usr/local/bin:$HOME/goroot/bin:$HOME/.gem/ruby/2.3.0/bin:$HOME/bin/google-cloud-sdk/bin:/usr/local/lib/node_modules:/usr/local/opt/gnu-sed/libexec/gnubin:$PATH
 
 # Reduce keytimeout in order to switch to escape mode faster
 export KEYTIMEOUT=1
@@ -98,5 +98,6 @@ export LANG=en_US.UTF-8
 export AWS_SDK_LOAD_CONFIG=1
 
 # Enable Fzf
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.fzf/shell/completion.zsh
+source ~/.fzf/shell/key-bindings.zsh
 export FZF_TMUX=1
