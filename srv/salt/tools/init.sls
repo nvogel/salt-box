@@ -13,8 +13,11 @@ tools_package:
       - wget
       - watch
       - nmap
-      - bash
-      - ripgrep
+{% if salt['grains.get']('os') != 'MacOS' %}
+      - xclip
+{% endif %}
+      #- bash
+      #- ripgrep
 
 {% if salt['grains.get']('os') == 'MacOS' %}
 install_color_ls:

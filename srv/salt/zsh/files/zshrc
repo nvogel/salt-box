@@ -79,20 +79,23 @@ setopt interactivecomments
 # Do not share history
 setopt no_share_history
 
+which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircolors.ansi-universal)
+
+# Hide the "user@hostname" info when you're logged in as yourself on your local machine
+DEFAULT_USER={{ user }}
+
 alias salt-apply="salt-call --local -c etc/salt state.apply"
+{% if salt['grains.get']('os') == 'MacOS' %}
 alias lc='colorls -lA --sd'
 alias lct='colorls --tree'
 alias lc1='colorls -1'
 alias l1='colorls -1'
 
-which dircolors >/dev/null && eval $(dircolors $HOME/.dircolors-solarized/dircolors.256dark)
-
-# Hide the "user@hostname" info when you're logged in as yourself on your local machine
-DEFAULT_USER={{ user }}
-
-{% if salt['grains.get']('os') == 'MacOS' %}
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+{% else %}
+alias pbcopy='xclip -selection clipboard'
+alias pbpaste='xclip -selection clipboard -o'
 {% endif %}
 
 export AWS_SDK_LOAD_CONFIG=1
