@@ -2,9 +2,10 @@
 
 vim_zshrc:
   file.managed:
-    - name:  ~/.zshrc
+    - name:  {{ user_home_path }}/.zshrc
     - source: salt://zsh/files/zshrc
     - template: jinja
+    - user: {{ user }}
     - mode: 440
 
 https://github.com/robbyrussell/oh-my-zsh.git:
@@ -15,7 +16,7 @@ https://github.com/robbyrussell/oh-my-zsh.git:
 
 create_custom_theme_dir:
   file.directory:
-    - name:   ~/.oh-my-zsh/custom/themes
+    - name:   {{ user_home_path }}/.oh-my-zsh/custom/themes
     - user: {{ user }}
     - makedirs: True
     - mode: 740
