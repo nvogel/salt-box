@@ -16,7 +16,7 @@ vim_dir:
   file.directory:
     - name: {{ user_home_path }}/.vim
     - user: {{ user }}
-    - mode: 770
+    - mode: 777
 
 install_plugin_manger:
   file.managed:
@@ -25,7 +25,7 @@ install_plugin_manger:
     - skip_verify: True
     - makedirs: True
     - user: {{ user }}
-    - mode: 440
+    - mode: 660
 
 vim_plugin:
   file.recurse:
